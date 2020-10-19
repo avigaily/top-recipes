@@ -1,0 +1,91 @@
+.filter {
+    position: sticky;
+    width: 176px;
+    top: 136px;
+    z-index: 1;
+    @media screen and (max-width: 880px) {
+        width: 100vw;
+        height: 100vh;
+        z-index: 4;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: white;
+        .close-btn{
+            font-size: 2rem;
+            height: 45px;
+            width: 45px;
+            color: #292c33;
+        border: none;
+        }
+    }
+    label {
+        display: flex;
+        align-items: center;
+        margin: 2px 0;
+        input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        span {
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            &::before {
+                content: "";
+                display: inline-block;
+                margin: 0 3px;
+                height: 18px;
+                width: 18px;
+                border: 2px #cfd8dc solid;
+                border-radius: 3px;
+            }
+        }
+    }
+
+    input:focus + span::before {
+        outline: #5d9dd5 solid 1px;
+    }
+
+    input:checked + span::before {
+        background: #c24b7e;
+        border-color: #c24b7e;
+    }
+
+    input:disabled + span::before {
+        background: #cfd8dc;
+        border-color: #cfd8dc;
+    }
+
+    input + span::after {
+        content: "✓";
+        position: absolute;
+        line-height: 18px;
+        text-align: center;
+        color: white;
+        top: 0px;
+        left: 0px;
+        margin: 0 3px;
+        height: 18px;
+        width: 18px;
+        border: 2px rgba(0, 0, 0, 0) solid;
+        opacity: 0;
+    }
+
+    input:checked + span::after {
+        opacity: 1;
+    }
+    div {
+        margin-bottom: 15px;
+        font-size: 1.5em;
+    }
+    label {
+        margin-inline-end: 15px;
+        cursor: pointer;
+    }
+    span {
+        cursor: pointer;
+    }
+}

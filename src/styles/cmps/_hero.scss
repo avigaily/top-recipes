@@ -1,0 +1,36 @@
+.hero{
+    
+    background-size: 100vw 449px;
+    background-position: bottom;
+    padding-bottom: 155px;
+}
+.hero-content {
+    > * {
+        max-width: 735px;
+    }
+    h2 {
+        height: 120px;
+        font-family: Raleway;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: center;
+    }
+    p {
+        max-width: 500px;
+        height: 90px;
+        font-family: Raleway;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: right;
+    }
+    a {
+        font-family: Raleway;
+        width: 280px;
+        height: 56px;
+        border-radius: 28px;
+        background: linear-gradient(152deg, #63e1d9, #34a0cd);
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16);
+    }
+}

@@ -1,0 +1,150 @@
+header {
+    h1{
+        font-family: IndieFlower;
+        font-size: 2rem;
+        margin: 16px;
+    }
+    .menu-btn,
+    .close-btn {
+        display: none;
+        order: -1;
+        height: 45px;
+        width: 45px;
+    }
+    @media screen and (max-width: 880px) {
+        h1{
+            font-size: 1.5rem;
+        }
+        .close-btn {
+            display: none;
+        }
+        .menu-btn {
+            display: block;
+        }
+        .nav-btns {
+            display: none;
+            background-color: #292c33;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            flex-direction: column;
+            width:200px;
+            padding-left: 10px;
+            button {
+                text-align: left;
+            }
+            ul{
+                width: 100%;
+                a{
+                    padding-left: 40px;
+                    justify-content: flex-start;
+                    height: 60px;
+                }
+            }
+        }
+        .shown {
+            &.menu-btn {
+                display: none;
+            }
+            &.close-btn {
+                display: block;
+            }
+            &.nav-btns{
+                display: flex;
+            }
+        }
+    }
+    color: white;
+    background-color: #292c33;
+    margin-bottom: 30px;
+    z-index: 4;
+    height: 75px;
+    position: sticky;
+    top: 0;
+    .nav-btns{
+        min-height: 100%;
+        button{
+            height: 60px;
+        }
+    }
+    button {
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 1.3rem;
+        height: 100%;
+        &:hover {
+            color: #c24b7e;
+        }
+    }
+    & > * {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .diets-btn {
+        margin-inline-end: 40px;
+    }
+    ul {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            color: white;
+            visibility: hidden;
+            font-size: 1.3rem;
+            height: 70px;
+            &:hover {
+                color: #c24b7e;
+            }
+        }
+        transition: all 1s ;
+        visibility: hidden;
+        z-index: 1;
+        height: 0px;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        margin: 0;
+        background-color: #292c33;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
+        justify-content: center;
+        gap: 1em;
+        &.shown {
+            transition: all 0s ;
+            @media screen and (max-width: 880px) {
+                height: auto;
+                width: 100%;
+                position: initial;
+            }
+            visibility: visible;
+            height: 70px;
+            a {
+                visibility: visible;
+            }
+        }
+    }
+    form {
+        @include for-narrow-layout {
+            width: 200px;
+        }
+        width: 300px;
+        input {
+            width: 100%;
+            height: 45px;
+            font-size: 22px;
+            border: 2px solid #393939;
+        }
+        button {
+            position: absolute;
+            height: 40px;
+            transform: translate(-100%, 10%);
+            img {
+                height: 85%;
+            }
+        }
+    }
+}

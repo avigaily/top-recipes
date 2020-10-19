@@ -1,0 +1,71 @@
+.top-categories {
+    margin-bottom: 50px;
+    .img-container {
+        max-width: 400px;
+        min-width: 300px;
+        height: 248px;
+        img {
+            object-fit: cover;
+        }
+    }
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        grid-template-rows: repeat(auto-fill,300px);
+        justify-content: center;
+        grid-gap: 2rem;
+        @media screen and (max-width:1275px) {
+            grid-template-columns: repeat(auto-fit, minmax(200px,300px));  
+        }
+    
+    .category {
+        background-color: #efededdc;
+        h5 {
+            margin: auto;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+// .my-carousel{
+    // .slick-prev:before,
+    // .slick-next:before {
+    //   color: red;
+    // }
+    // .img-container{
+    //     max-width: 240px;
+    //     max-height: 240px;
+    // }
+// }
+.wrapper{
+    width:100%;
+    max-height: 390px;
+    overflow: hidden;
+  }
+  .slick-slider{
+    width:90%;
+    margin:0 auto;
+  }
+  .slick-slide{
+    margin:10px;
+    max-width: fit-content;
+  }
+//   .slick-slide img{
+//     width:100%;
+//   }
+  .slick-prev, .slick-next {
+    top:  35% !important;
+    @media screen and (min-width: 600px) and (max-width:1200px) {
+        top:  16% !important;   
+    }
+    &:focus{
+        color: green;
+    outline: blue;
+    background: red;
+    }
+  }
+  .slick-prev{
+      transform: scaleX(-1) !important;
+  }
+  
+
