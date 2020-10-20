@@ -58,8 +58,8 @@ export default function CarouselSlick(props) {
         arrows:true,
         draggable:false,
         focusOnSelect:true,
-        prevArrow:<button type="button" className="slick-prev">{next}</button>,
-        nextArrow:<button type="button" className="slick-next">{next}</button>,
+        // prevArrow:<button type="button" className="slick-prev">{next}</button>,
+        // nextArrow:<button type="button" className="slick-next">{next}</button>,
         responsive: [
             {
                 breakpoint: 1550,
