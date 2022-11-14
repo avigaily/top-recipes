@@ -10,7 +10,6 @@
     }
         display: grid;
         grid-template-columns: repeat(3, 400px);
-        grid-template-rows: repeat(auto-fill,300px);
         justify-content: center;
         grid-gap: 2rem;
         @media screen and (max-width:1275px) {
